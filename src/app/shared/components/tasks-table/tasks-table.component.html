@@ -1,0 +1,42 @@
+<div class="task-table-container">
+  <table class="task-table">
+    <thead>
+      <tr>
+        <th>Título</th>
+        <th>Descripción</th>
+        <th>Fecha</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of tasks$ | async">
+        <td>{{ task.title }}</td>
+        <td>{{ task.description }}</td>
+        <td>{{ task.date | date: 'dd/MM/yyyy' }}</td>
+        <td class="status" [class.completed]="task.completed">
+          {{ task.completed ? 'Completado' : 'Pendiente' }}
+        </td>
+        <td>
+          <ion-button (click)="editTask(task)">Editar</ion-button>
+          <ion-button (click)="deleteTask(task)">Eliminar</ion-button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="task-cards">
+  <div class="task-card" *ngFor="let task of tasks$ | async">
+    <h3>{{ task.title }}</h3>
+    <p>{{ task.description }}</p>
+    <span class="date">{{ task.date | date: 'dd/MM/yyyy' }}</span>
+    <span class="status" [class.completed]="task.completed">
+      {{ task.completed ? 'Completado' : 'Pendiente' }}
+    </span>
+    <div class="actions">
+      <ion-button (click)="editTask(task)">Editar</ion-button>
+      <ion-button (click)="deleteTask(task)">Eliminar</ion-button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+// Contenedor de la tabla
+.task-table-container {
+  overflow-x: auto; 
+  display: none; 
+
+  @media (min-width: 768px) {
+    display: block; 
+  }
+
+  .task-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .status {
+      font-weight: bold;
+    }
+
+    .completed {
+      color: green;
+    }
+  }
+}
+
+// Contenedor de tarjetas
+.task-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @media (min-width: 768px) {
+    display: none; // Ocultar tarjetas en pantallas grandes
+  }
+
+  .task-card {
+    padding: 15px;
+    border-radius: 8px;
+    background: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    h3 {
+      margin: 0 0 5px;
+    }
+
+    .date {
+      font-size: 0.9em;
+      color: gray;
+    }
+
+    .status {
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    .completed {
+      color: green;
+    }
+  }
+}

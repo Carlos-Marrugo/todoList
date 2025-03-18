@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalles de la Tarea</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div *ngIf="task" class="task-detail-container">
+    <h2>{{ task.title }}</h2>
+    <p>{{ task.description }}</p>
+    <p><strong>Fecha:</strong> {{ task.date | date: 'dd/MM/yyyy' }}</p>
+    <p><strong>Estado:</strong> {{ task.completed ? 'Completado' : 'Pendiente' }}</p>
+  </div>
+</ion-content>

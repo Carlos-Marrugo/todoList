@@ -1,0 +1,30 @@
+.loader-content {
+    --background: linear-gradient(135deg, #007aff, #00c6ff); /* Fondo degradado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .loader-container {
+    text-align: center;
+  }
+  
+  .loader-icon {
+    font-size: 80px;
+    color: #ffffff; /* Color blanco para el icono */
+    margin-bottom: 20px;
+  }
+  
+  .loader-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff; /* Color blanco para el título */
+    margin-bottom: 10px;
+  }
+  
+  .loader-subtitle {
+    font-size: 18px;
+    color: #ffffff; /* Color blanco para el subtítulo */
+    opacity: 0.8;
+  }
